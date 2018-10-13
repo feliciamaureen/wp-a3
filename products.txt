@@ -1,0 +1,5 @@
+id	name	desc	price
+1	Einar	beige wooden legs with fabric cushion and rattan back	6000
+2	Clavo	beige arms and legs with black rattan seat and back	6500
+3	Cadiz	orange woven chord seat and back with black metal legs	4500
+4	Evelyn	blue woven chord seat and back with black metal legs	4000
