@@ -49,9 +49,9 @@ topModule('products')
             <img src="../a3/images/clavo.jpg" alt="clavo" style="width:100%">
             <div class="desc"> Clavo
                     <?php  
-                        foreach ($products as $lineIndex) {
-                            $lineWords = explode(" ", $line);
-                             echo $linewords;
+                        foreach ($products as $product) {
+                            $product = explode(" ", $product);
+                             echo $product;
                         }
                     ?>
                 </div>
