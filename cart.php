@@ -34,7 +34,6 @@
             <?php
                 echo "<ul>";
                 foreach ($_SESSION['cart'] as $key => $product) {
-                //echo "<li>".$key. " - ".$product["qty"]. "</li>";
                 var_dump($product);
                 }
             ?>
@@ -42,16 +41,16 @@
             <br>
             <br>
         </p2>
+            
+
     <a href="checkout.php">
-    <div class="blackbutton">
-        <p>Go to Checkout</p>
-    </div>
+    <button class="button">Proceed to Checkout
+    </button>
     </a>
   
     <a href="products.php">
-    <div class="blackbutton">
-        <p>Continue Shopping</p>
-    </div>
+    <button class="button">Continue Shopping
+    </button>
     </a>
 
     <form method="post"> <button type="submit" name="cancel"> Cancel</button></form>

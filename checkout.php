@@ -10,7 +10,7 @@ $nameError ="";
     if(isset($_POST['submit'])){
         if (empty($_POST["fullname"])) {
             $nameError = "Name is required";
-       yeah } else {
+        } else {
             $fullname = test_input($_POST["name"]);
             // check name only contains letters and whitespace
             if (!preg_match("/^[a-zA-Z ]*$/",$fullname)) {
@@ -58,7 +58,7 @@ $nameError ="";
              CVV: <input type = 'text' name="cvv" placeholder="123" required>
             </div>
             
-            <button type="submit" class = "checkoutButton">
+            <button type="submit" class = "button">
             Proceed to Checkout
             </button>
         </form>

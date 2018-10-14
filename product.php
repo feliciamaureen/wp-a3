@@ -33,7 +33,7 @@ topModule('product')
             <div class="qty">
             <button class="minus-btn" type="button" name="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
             
-            <input form="product" type="number" name="qty" value="1" min="1" max="10" id="ordernumber">
+            <input form="product" type="number" name="qty" value="1" min="1" max="10" id="ordernumber" method = 'post'>
             
             <button class="plus-btn" type="button" name="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
         </div>

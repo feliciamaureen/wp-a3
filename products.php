@@ -4,16 +4,22 @@
 session_start();
 include ('tools.php');
 
-//display array on the bottom of the page
-$products = fopen("products.txt","r");
-if (($headings = fgetcsv($products, 0, "\t")) !== false) { 
-    while ( $cells = fgetcsv($products, 0, "\t") ) { 
-        for ($x=1; $x<count($cells); $x++) 
-            $pumps[$cells[0]][$headings[$x]]=$cells[$x]; 
-    }
+$products = FileToArray();
+foreach($products as $id=>$details)
+{
+    echo '<div class="product">';
+    echo $details['id'].'<br>';
+    echo $details['name'].'<br>';
+    echo $details['desc'].'<br>';
+    echo $details['price'].'<br>';
+    echo '</div>';
 }
-fclose($products); 
 
+
+//$prod1 = $products[0];
+//echo $prod1;
+//$prod1details = explode($prod1)
+  //  echo $prod1details;
 
 
 topModule('products')
@@ -21,10 +27,8 @@ topModule('products')
 
 <?php
 
-    if (isset($_SESSION['user']))
+if (isset($_SESSION['user']))
   echo "<p>Logged in as {$_SESSION['user']['fname']}</p>";
-
-
 ?>
 
     <main>
@@ -93,7 +97,7 @@ topModule('products')
     </div>
     </main>
 
-    <?php preShow($pumps); ?>
+    <?php preShow($products); ?>
 
     <?php
     endModule('footer');

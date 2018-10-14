@@ -58,14 +58,24 @@ function endModule($footer) {
 
     <?php } ?>        
         
-        
+ 
 <?php
-function explode_a_string()
+function fileToArray()
 {
-$string = "PHP is fun!";
-$words = explode($string);
-foreach($words as $word)
-echo $word.'<br>';
+$products = array();
+$products = fopen("products.txt","r");
+if (($headings = fgetcsv($products, 0, "\t")) !== false) { 
+    while ( $cells = fgetcsv($products, 0, "\t") ) { 
+        for ($x=1; $x<count($cells); $x++) 
+            $pumps[$cells[0]][$headings[$x]]=$cells[$x]; 
+    }
 }
+return $products;
+
+$prod1 = $products[0];
+echo $prod1;
+$prod1details = explode($prod1)
+    echo $prod1details;
+}      
 ?>
 
